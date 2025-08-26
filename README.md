@@ -33,3 +33,15 @@ Bu proje, bir SQL Server veritabanı için kritik bir olağanüstü durum kurtar
 *   `FULL` ve `SIMPLE` kurtarma modelleri arasındaki temel farklar.
 *   `RESTORE DATABASE` ve `RESTORE LOG` kullanarak bir veritabanını kurtarma süreci.
 *   `WITH NORECOVERY` ve `WITH RECOVERY` seçeneklerinin etkili bir şekilde kullanımı.
+
+  ## 🚀 Kurulum ve Çalıştırma Talimatları
+
+1.  **Gereksinimler:** Aşağıdakilerin makinenizde yüklü olduğundan emin olun:
+    *   [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) (herhangi bir sürüm)
+    *   [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/tr-tr/sql/ssms/download-sql-server-management-studio-ssms)
+    *   [AdventureWorks2022 Örnek Veritabanı](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms)
+
+2.  **Veritabanını Kurun:** İndirdiğiniz `AdventureWorks2022` veritabanını SQL Server'a geri yükleyin.
+
+3.  **Script'leri Çalıştırın:** `scripts/` klasöründeki `disaster_recovery.sql` dosyasını SSMS'de açın ve adım adım çalıştırın.
+    *   **ÖNEMLİ:** Script'teki yedek dosya yollarını (`C:\Users\alike\...`) kendi bilgisayarınızdaki bir klasör yoluna değiştirmeyi unutmayın!

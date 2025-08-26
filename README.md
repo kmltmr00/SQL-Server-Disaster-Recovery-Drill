@@ -1,31 +1,35 @@
-# SQL-Server-Disaster-Recovery-Drill
-A hands-on simulation of a SQL Server disaster recovery scenario using Full and Transaction Log backups.
+# SQL Server Olağanüstü Durum Kurtarma Tatbikatı
 
-# SQL Server Disaster Recovery Drill
+Bir SQL Server olağanüstü durum kurtarma senaryosunun **Tam (Full)** ve **İşlem Günlüğü (Transaction Log)** yedekleri kullanılarak birebir uygulamalı simülasyonu.
 
-## 🚨 Overview
-This project is a hands-on simulation of a critical disaster recovery scenario for a SQL Server database. The goal was to successfully restore the AdventureWorks2022 database after a simulated failure, using a combination of Full and Transaction Log backups.
+## 🚨 Proje Genel Bakış
 
-## ⚡ Steps Performed
-1.  **Preparation:** Set the database recovery model to `FULL`.
-2.  **Full Backup:** Took a full backup of the database.
-3.  **Simulate Workload:** Executed data modification operations (UPDATE).
-4.  **Log Backup:** Took a transaction log backup to capture the changes.
-5.  **Simulate Disaster:** Dropped the database to simulate a critical failure.
-6.  **Restore Full Backup:** Restored the full backup with `NORECOVERY`.
-7.  **Restore Log Backup:** Restored the log backup with `RECOVERY` to bring the database to its state just before the failure.
-8.  **Verification:** Queried the database to verify data consistency and successful recovery.
+Bu proje, bir SQL Server veritabanı için kritik bir olağanüstü durum kurtarma senaryosunun uygulamalı bir simülasyonudur. Amacım, benzetilmiş bir başarısızlık (felaket) durumundan sonra **AdventureWorks2022** veritabanını, birleştirilmiş bir Tam ve İşlem Günlüğü yedek stratejisi kullanarak başarılı bir şekilde kurtarmaktı.
 
-## 🛠️ Technologies Used
-- **Microsoft SQL Server**
-- **SQL Server Management Studio (SSMS)**
-- **AdventureWorks2022 Sample Database**
+## ⚡ Gerçekleştirilen Adımlar
 
-## 📁 Repository Structure
-- `/scripts/disaster_recovery.sql` - Contains the complete T-SQL code for the drill.
+1.  **Hazırlık:** Veritabanının kurtarma modelini `FULL` olarak ayarladım.
+2.  **Tam Yedek (Full Backup):** Veritabanının tam bir yedeğini aldım.
+3.  **İş Yükü Simülasyonu:** Veri değişiklik operasyonları (`UPDATE` sorgusu) çalıştırdım.
+4.  **İşlem Günlüğü Yedeği (Log Backup):** Yapılan değişiklikleri yakalamak için bir transaction log yedeği aldım.
+5.  **Felaket Senaryosu Simülasyonu:** Veritabanını düşürerek (DROP) kritik bir arızayı simüle ettim.
+6.  **Tam Yedeği Geri Yükleme:** Tam yedeği `NORECOVERY` seçeneğiyle geri yükledim.
+7.  **İşlem Günlüğü Yedeğini Geri Yükleme:** Log yedeğini `RECOVERY` seçeneğiyle geri yükleyerek, veritabanını felaketten hemen önceki durumuna getirdim.
+8.  **Doğrulama:** Veri tutarlılığını ve başarılı kurtarmayı doğrulamak için veritabanını sorguladım.
 
-## 💡 Key Learnings
-- The importance of a well-defined backup strategy.
-- The difference between `FULL` and `SIMPLE` recovery models.
-- The process of restoring a database using `RESTORE DATABASE` and `RESTORE LOG`.
-- Using `WITH NORECOVERY` and `WITH RECOVERY` options effectively.
+## 🛠️ Kullanılan Teknolojiler
+
+*   Microsoft SQL Server
+*   SQL Server Management Studio (SSMS)
+*   AdventureWorks2022 Örnek Veritabanı
+
+## 📁 Depo (Repository) Yapısı
+
+*   `/scripts/afet_kurtarma.sql` - Tatbikatın tamamını içeren T-SQL kodlarını barındırır.
+
+## 💡 Edinilen Önemli Bilgiler
+
+*   İyi tanımlanmış bir yedekleme stratejisinin önemi.
+*   `FULL` ve `SIMPLE` kurtarma modelleri arasındaki temel farklar.
+*   `RESTORE DATABASE` ve `RESTORE LOG` kullanarak bir veritabanını kurtarma süreci.
+*   `WITH NORECOVERY` ve `WITH RECOVERY` seçeneklerinin etkili bir şekilde kullanımı.

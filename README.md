@@ -25,7 +25,7 @@ Bu proje, bir SQL Server veritabanı için kritik bir olağanüstü durum kurtar
 
 ## 📁 Depo (Repository) Yapısı
 
-*   `/scripts/afet_kurtarma.sql` - Tatbikatın tamamını içeren T-SQL kodlarını barındırır.
+*   `/scripts/disaster_recovery.sql` - Tatbikatın tamamını içeren T-SQL kodlarını barındırır.
 
 ## 💡 Edinilen Önemli Bilgiler
 
